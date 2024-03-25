@@ -1869,7 +1869,7 @@ const Body = () => {
         <div className="res-container">
           {
            resList.map((item) => {
-            return <Restcards items = {resList}/>
+            return <Restcards items = {item}/>
 
            })
           }

@@ -2,7 +2,7 @@ import React from "react";
 // import { card_url } from "../utils/mockdata";
 const Restcards = (props) => {
 
-
+   console.log(props?.items);
     
     return(
         <div className="res-card">
