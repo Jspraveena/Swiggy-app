@@ -1,8 +1,5 @@
-
-import './App.css';
-import Body from './components/Body';
-import Header from './components/Header';
-import Restcards from './components/Restcards';
+import React from "react";
+import Restcards from "./Restcards";
 const resList  = [
   {
     "info": {
@@ -1865,16 +1862,15 @@ const resList  = [
       "type": "WEBLINK"
     }
   }
-];     
+];      
+ console.log(resList); 
+const Body = () => {
+    return(
+        <div className="res-container">
+           <Restcards resData = {resList}/>
+        </div>
 
-function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <Body/>
-      <Restcards />
-    </div>
-  );
+    )
 }
 
-export default App;
+export default Body;
