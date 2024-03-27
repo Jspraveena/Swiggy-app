@@ -1,14 +1,17 @@
 import React from "react";
-// import { card_url } from "../utils/mockdata";
-const Restcards = (props) => {
+import { card_url } from "../utils/mockdata";
 
-   console.log(props?.items);
-    
+const Restcards = (props) => {
+    const {items} = props
+    const {name, cuisines,cloudinaryImageId,avgRating,costForTwo} = items?.info
     return(
         <div className="res-card">
-                <img className="res-card-img" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597" alt ="card-img"/>
-                <h3 className="rescard-heading">{props?.info?.name}</h3>
-             
+            <img className="res-card-img" src= {card_url + cloudinaryImageId} alt ="card-img"/>
+                <h3 className="rescard-heading">{name}</h3>
+                <h6>{cuisines.join(",")}</h6>
+                <h6>{costForTwo}</h6>
+                <h6>{avgRating} Stars</h6>
+                
         </div>
     )
 }
